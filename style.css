@@ -1,0 +1,455 @@
+   /* RESET */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2d2d2d;
+    background: #ffffff;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+
+   /* GENERAL */
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+main > section,
+.footer {
+    width: min(1120px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+.section-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    margin-bottom: 60px;
+    color: #222;
+}
+
+.btn {
+    border: none;
+    background: #ff6b5f;
+    color: white;
+    padding: 14px 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.btn img {
+    width: 17px;
+    height: 17px;
+    object-fit: contain;
+}
+
+
+   /* HEADER */
+
+.header {
+    height: 0;
+}
+
+
+   /* HERO */
+
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    height: 560px;
+    margin-bottom: 120px;
+}
+
+.hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero__card {
+    position: absolute;
+    width: min(520px, 45%);
+    left: max(7vw, calc((100% - 1120px) / 2));
+    bottom: -55px;
+    padding: 55px 48px;
+    background: white;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.hero__card h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(28px, 3vw, 43px);
+    line-height: 1.05;
+    max-width: 460px;
+    margin-bottom: 24px;
+}
+
+.hero__card p {
+    max-width: 470px;
+    color: #777;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+
+/*  SERVICES*/
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px;
+    padding: 80px 0 130px;
+}
+
+.service-card__image {
+    width: 145px;
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 30px;
+}
+
+.service-card h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    line-height: 1.25;
+    margin-bottom: 17px;
+}
+
+.service-card p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.service-card a,
+.facility-card a,
+.site-card a {
+    color: #ff6b5f;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+   /* FACILITIES */
+
+.facilities {
+    padding: 40px 0 150px;
+}
+
+.facilities__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;
+}
+
+.facility-card img {
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+    margin-bottom: 30px;
+}
+
+.facility-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.facility-card p {
+    color: #888;
+    font-size: 13px;
+    line-height: 1.65;
+    margin-bottom: 17px;
+}
+
+
+   /* SITES */
+
+.sites {
+    display: grid;
+    grid-template-columns: 0.8fr 2fr;
+    gap: 70px;
+    padding: 70px 0 150px;
+    align-items: start;
+}
+
+.sites__intro {
+    padding-top: 10px;
+}
+
+.sites__intro h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    line-height: 1.05;
+    margin-bottom: 24px;
+}
+
+.sites__intro p {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.sites__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.site-card__image {
+    width: 100%;
+    aspect-ratio: 0.72;
+    object-fit: cover;
+    margin-bottom: 18px;
+}
+
+.site-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    margin-bottom: 6px;
+}
+
+.site-card p {
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+
+   /* ADVANTAGES */
+
+.advantages {
+    padding: 50px 0 150px;
+}
+
+.advantages__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.advantage-card img {
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+    margin-bottom: 30px;
+}
+
+.advantage-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.advantage-card p {
+    color: #999;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+   /* FOOTER */
+
+.footer {
+    width: 100%;
+    max-width: none;
+    background: #f7f7f5;
+    padding: 75px max(24px, calc((100% - 1120px) / 2)) 25px;
+}
+
+.footer__top {
+    display: grid;
+    grid-template-columns: 1.6fr repeat(3, 1fr);
+    gap: 70px;
+    padding-bottom: 80px;
+}
+
+.footer__brand span {
+    display: block;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.footer__brand h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 35px;
+    line-height: 1.05;
+    max-width: 230px;
+}
+
+.footer__column h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.footer__column ul {
+    list-style: none;
+}
+
+.footer__column li {
+    margin-bottom: 14px;
+}
+
+.footer__column a {
+    color: #777;
+    font-size: 12px;
+}
+
+.footer__bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    color: #999;
+    font-size: 11px;
+}
+
+.footer__bottom nav {
+    display: flex;
+    gap: 25px;
+}
+
+
+   /* TABLET */
+
+@media (max-width: 900px) {
+
+    .services {
+        gap: 30px;
+    }
+
+    .facilities__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sites {
+        grid-template-columns: 1fr;
+    }
+
+    .footer__top {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+   /* MOBILE */
+
+@media (max-width: 650px) {
+
+    main > section {
+        width: calc(100% - 32px);
+    }
+
+
+    /* HERO */
+
+    .hero {
+        width: 100%;
+        height: auto;
+        margin-bottom: 70px;
+    }
+
+    .hero__image {
+        height: 330px;
+    }
+
+    .hero__card {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        width: calc(100% - 32px);
+        margin: -45px auto 0;
+        padding: 30px 25px;
+    }
+
+
+    /* SERVICES */
+
+    .services {
+        grid-template-columns: 1fr;
+        padding: 50px 0 100px;
+    }
+
+
+    /* FACILITIES */
+
+    .facilities {
+        padding-bottom: 100px;
+    }
+
+    .facilities__grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* SITES */
+
+    .sites {
+        padding-bottom: 100px;
+    }
+
+    .sites__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .site-card__image {
+        aspect-ratio: 1 / 1;
+    }
+
+
+    /* ADVANTAGES */
+
+    .advantages__grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* FOOTER */
+
+    .footer__top {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer__bottom nav {
+        flex-wrap: wrap;
+    }
+}
