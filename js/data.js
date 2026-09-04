@@ -96,3 +96,45 @@ let advantages = [
 ]
 
 // Opret dit dataobjekt til footerens indhold herunder
+let footerData = {
+    brand: {
+        smallTitle: "Easy Camper",
+        title: "When Passion Meets Comfort.",
+        copyright: "© 2021 EasyCamper - All rights reserved"
+    },
+
+    columns: [
+        {
+            headline: "Discover the Network",
+            links: [
+                "Where to sleep",
+                "Where to eat",
+                "Where to shop",
+                "What to visit"
+            ]
+        },
+        {
+            headline: "Become a Manager",
+            links: [
+                "Join the Network",
+                "Terms and conditions",
+                "Manager area"
+            ]
+        },
+        {
+            headline: "Assistance",
+            links: [
+                "FAQ",
+                "Contact us",
+                "Privacy Policy"
+            ]
+        }
+    ],
+
+    bottomLinks: [
+        "About",
+        "Cookie",
+        "Privacy",
+        "Terms"
+    ]
+};
