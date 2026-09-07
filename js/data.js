@@ -107,34 +107,36 @@ let footerData = {
         {
             headline: "Discover the Network",
             links: [
-                "Where to sleep",
-                "Where to eat",
                 "Where to shop",
-                "What to visit"
+                "Tour Guided",
+                "Our Tours",
+                "About Us"
             ]
         },
         {
             headline: "Become a Manager",
             links: [
-                "Join the Network",
-                "Terms and conditions",
-                "Manager area"
+                "Join your Pairing",
+                "Offer your Service",
+                "Are you a guide?"
             ]
         },
         {
             headline: "Assistance",
             links: [
-                "FAQ",
-                "Contact us",
-                "Privacy Policy"
+                "support Center",
+                "FAQs",
+                "Cancallation Options",
+                "Reliablity and Sequrity"
             ]
         }
     ],
 
     bottomLinks: [
         "About",
-        "Cookie",
-        "Privacy",
-        "Terms"
+        "Site Map",
+        "Terms",
+        "Privacy Policy",
+        "Teams"
     ]
 };
