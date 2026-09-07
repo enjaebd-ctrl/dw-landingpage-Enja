@@ -124,29 +124,27 @@ sitesSection.innerHTML = `
 
 const advantagesSection = document.querySelector(".advantages");
 
-const advantagesTitle = document.createElement("h2");
-advantagesTitle.classList.add("section-title");
-advantagesTitle.textContent = "Our Advantages";
+advantagesSection.innerHTML = `
+    <h2 class="section-title">
+        Our Advantages
+    </h2>
 
-advantagesSection.appendChild(advantagesTitle);
+    <div class="advantages__grid">
 
-const advantagesGrid = document.createElement("div");
-advantagesGrid.classList.add("advantages__grid");
+        ${advantages.map(advantage => `
+            <article class="advantage-card">
 
-advantages.forEach(advantage => {
-    const article = document.createElement("article");
-    article.classList.add("advantage-card");
+                <img src="${advantage.icon}" alt="">
 
-    article.innerHTML = `
-        <img src="${advantage.icon}" alt="">
-        <h3>${advantage.headline}</h3>
-        <p>${advantage.text}</p>
-    `;
+                <h3>${advantage.headline}</h3>
 
-    advantagesGrid.appendChild(article);
-});
+                <p>${advantage.text}</p>
 
-advantagesSection.appendChild(advantagesGrid);
+            </article>
+        `).join("")}
+
+    </div>
+`;
 
 
 // FOOTER
