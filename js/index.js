@@ -151,55 +151,62 @@ advantagesSection.innerHTML = `
 
 const footer = document.querySelector(".footer");
 
-const footerTop = document.createElement("div");
-footerTop.classList.add("footer__top");
+footer.innerHTML = `
+    <div class="footer__top">
 
-const footerBrand = document.createElement("div");
-footerBrand.classList.add("footer__brand");
+        <div class="footer__brand">
 
-footerBrand.innerHTML = `
-    <span>${footerData.brand.smallTitle}</span>
-    <h2>${footerData.brand.title}</h2>
+            <span>
+                ${footerData.brand.smallTitle}
+            </span>
+
+            <h2>
+                ${footerData.brand.title}
+            </h2>
+
+        </div>
+
+
+        ${footerData.columns.map(column => `
+            <div class="footer__column">
+
+                <h3>
+                    ${column.headline}
+                </h3>
+
+                <ul>
+
+                    ${column.links.map(link => `
+                        <li>
+                            <a href="#">
+                                ${link}
+                            </a>
+                        </li>
+                    `).join("")}
+
+                </ul>
+
+            </div>
+        `).join("")}
+
+    </div>
+
+
+    <div class="footer__bottom">
+
+        <p>
+            ${footerData.brand.copyright}
+        </p>
+
+        <nav>
+
+            ${footerData.bottomLinks.map(link => `
+                <a href="#">
+                    ${link}
+                </a>
+            `).join("")}
+
+        </nav>
+
+    </div>
 `;
-
-footerTop.appendChild(footerBrand);
-
-footerData.columns.forEach(column => {
-    const footerColumn = document.createElement("div");
-    footerColumn.classList.add("footer__column");
-
-    const links = column.links
-        .map(link => `<li><a href="#">${link}</a></li>`)
-        .join("");
-
-    footerColumn.innerHTML = `
-        <h3>${column.headline}</h3>
-        <ul>
-            ${links}
-        </ul>
-    `;
-
-    footerTop.appendChild(footerColumn);
-});
-
-footer.appendChild(footerTop);
-
-
-// Footer bottom
-
-const footerBottom = document.createElement("div");
-footerBottom.classList.add("footer__bottom");
-
-const bottomLinks = footerData.bottomLinks
-    .map(link => `<a href="#">${link}</a>`)
-    .join("");
-
-footerBottom.innerHTML = `
-    <p>${footerData.brand.copyright}</p>
-
-    <nav>
-        ${bottomLinks}
-    </nav>
-`;
-
-footer.appendChild(footerBottom);
