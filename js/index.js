@@ -81,47 +81,44 @@ facilitiesSection.innerHTML =`
 
 const sitesSection = document.querySelector(".sites");
 
-const sitesIntro = document.createElement("div");
-sitesIntro.classList.add("sites__intro");
+sitesSection.innerHTML = `
+    <div class="sites__intro">
 
-sitesIntro.innerHTML = `
-    <h2>${sites.headline}</h2>
-    <p>${sites.text}</p>
+        <h2>${sites.headline}</h2>
 
-    <button class="btn">
-        <span>Start</span>
-        <img src="${sites.btnicon}" alt="">
-    </button>
+        <p>${sites.text}</p>
+
+        <button class="btn">
+            Start
+            <img src="${sites.btnicon}" alt="">
+        </button>
+
+    </div>
+
+    <div class="sites__grid">
+
+        ${sites.places.map(place => `
+            <article class="site-card">
+
+                <img
+                    class="site-card__image"
+                    src="${place.img}"
+                    alt="${place.name}"
+                >
+
+                <h3>${place.name}</h3>
+
+                <p>${place.city}</p>
+
+                <a href="#">
+                    View the site
+                </a>
+
+            </article>
+        `).join("")}
+
+    </div>
 `;
-
-sitesSection.appendChild(sitesIntro);
-
-const sitesGrid = document.createElement("div");
-sitesGrid.classList.add("sites__grid");
-
-sites.places.forEach(place => {
-    const article = document.createElement("article");
-    article.classList.add("site-card");
-
-    article.innerHTML = `
-        <img
-            class="site-card__image"
-            src="${place.img}"
-            alt="${place.name}"
-        >
-
-        <h3>${place.name}</h3>
-
-        <p>${place.city}</p>
-
-        <a href="#">View the site</a>
-    `;
-
-    sitesGrid.appendChild(article);
-});
-
-sitesSection.appendChild(sitesGrid);
-
 
 // ADVANTAGES
 
