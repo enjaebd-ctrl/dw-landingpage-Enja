@@ -24,12 +24,9 @@ heroSection.innerHTML = `
 
 const servicesSection = document.querySelector(".services");
 
-services.forEach(service => {
-    const article = document.createElement("article");
-    article.classList.add("service-card");
-
-    article.innerHTML = `
-        <img
+servicesSection.innerHTML = services.map(service => `
+    <article class="service-card">
+  <img
             class="service-card__image"
             src="${service.illustration}"
             alt="${service.headline}"
@@ -44,10 +41,9 @@ services.forEach(service => {
         <a href="#">
             ${service.linktext}
         </a>
-    `;
-
-    servicesSection.appendChild(article);
-});
+        
+     </article>
+`).join("");
 
 
 // FACILITIES
