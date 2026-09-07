@@ -6,8 +6,11 @@ heroSection.innerHTML = `
     <img class="hero__image" src="${hero.image}" alt="EasyCamper">
 
     <div class="hero__card">
-        <h1>${hero.headline}</h1>
-        <p>${hero.copy}</p>
+<h1>${hero.headline.replace(
+    "save your time",
+    '<span class="orange">save your time</span>'
+)}</h1>        
+<p>${hero.copy}</p>
 
         <button class="btn">
             <img src="${hero.icon}" alt="">
