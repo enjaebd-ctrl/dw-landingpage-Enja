@@ -41,7 +41,7 @@ servicesSection.innerHTML = services.map(service => `
         <a href="#">
             ${service.linktext}
         </a>
-        
+
      </article>
 `).join("");
 
@@ -50,30 +50,31 @@ servicesSection.innerHTML = services.map(service => `
 
 const facilitiesSection = document.querySelector(".facilities");
 
-const facilitiesTitle = document.createElement("h2");
-facilitiesTitle.classList.add("section-title");
-facilitiesTitle.textContent = facilities.headline;
+facilitiesSection.innerHTML =`
+ <h2 class="section-title">
+        ${facilities.headline}
+    </h2>
+    
+    <div class="facilities__grid">
 
-facilitiesSection.appendChild(facilitiesTitle);
+        ${facilities.options.map(option => `
+            <article class="facility-card">
 
-const facilitiesGrid = document.createElement("div");
-facilitiesGrid.classList.add("facilities__grid");
+                <img src="${option.icon}" alt="">
 
-facilities.options.forEach(option => {
-    const article = document.createElement("article");
-    article.classList.add("facility-card");
+                <h3>${option.headline}</h3>
 
-    article.innerHTML = `
-        <img src="${option.icon}" alt="">
-        <h3>${option.headline}</h3>
-        <p>${option.text}</p>
-        <a href="#">Show me more</a>
-    `;
+                <p>${option.text}</p>
 
-    facilitiesGrid.appendChild(article);
-});
+                <a href="#">
+                    Show me more
+                </a>
 
-facilitiesSection.appendChild(facilitiesGrid);
+            </article>
+        `).join("")}
+
+    </div>
+`;
 
 
 // SITES
